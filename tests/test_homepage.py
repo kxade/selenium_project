@@ -17,7 +17,7 @@ class TestHomepage:
     #     element = wait.until(ec.visibility_of_element_located((By.CSS_SELECTOR, '#id_123')))
     
     def test_nav_links(self):
-        driver = webdriver.Chrome()
-        homepage_nav = HomepageNav(driver)
-        print(homepage_nav.get_nav_links_text())
-        print('hello')
+        homepage_nav = HomepageNav(self.driver) 
+        actual_links = homepage_nav.get_nav_links_text()
+        expected_links = homepage_nav.NAV_LINK_TEXT
+        assert actual_links == expected_links, 'Validating Nav Links Text'

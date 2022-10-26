@@ -4,10 +4,13 @@ from typing import List
 
 
 class HomepageNav(SeleniumBase):
+
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
         self.__nav_links: str = '#mainNavigationFobs>li'
+        self.NAV_LINK_TEXT = 'Women,Men,Kids,Home,Beauty,Shoes,Handbags,Jewelry,Furniture,Toys,Gifts,Trending,Sale'
+
 
 
     def get_nav_links(self) -> List[WebElement]:

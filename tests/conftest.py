@@ -9,7 +9,7 @@ def get_chrome_options():
     options = Options()
     options.add_argument('chrome')
     options.add_argument('--start-maximized')
-    options.add_argument('--window-size=1650,900')
+    options.add_argument('--window-size=800,900')
     return options
 
 @pytest.fixture
